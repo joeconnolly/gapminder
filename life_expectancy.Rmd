@@ -1,0 +1,81 @@
+---
+title: "Life Expectancy"
+author: "Joe Connolly"
+date: "2/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+## Life expectancy
+
+*GDP vs life expectancy*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= gdp, y=life_expectancy, size= population, color= continent)) +
+  geom_point()
+```
+
+*GDP vs life expectancy boxplot*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= gdp, y=life_expectancy, size= population, color= continent)) +
+  geom_boxplot()
+```
+
+*Infant mortality vs Life expectancy*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= infant_mortality, y=life_expectancy, size= population, color= continent)) +
+  geom_point() +
+  geom_smooth(mapping= aes(x= infant_mortality, y=life_expectancy))
+```
+
+*Infant mortality boxplot vs Life expectancy*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= infant_mortality, y=life_expectancy, size= population, color= continent)) +
+  geom_boxplot()
+```
+
+
+*Fertility vs Life expectancy*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= fertility, y=life_expectancy, size= population, color= continent)) +
+  geom_point()
+```
+
+*Fertility vs life expectancy boxplot*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= fertility, y=life_expectancy, size= population, color= continent)) +
+  geom_boxplot()
+```
+
+
+*Population size vs life expectancy*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= population, y=life_expectancy, size= population, color= continent)) +
+  geom_point()
+```
+
+*Population size vs life expectancy boxplot*
+
+```{r}
+gap2011 %>%
+  ggplot(aes(x= population, y=life_expectancy, size= population, color= continent)) +
+  geom_boxplot()
+```
