@@ -1,5 +1,5 @@
 ---
-title: "gapminder_lab3"
+title: "Data"
 author: "Joe Connolly"
 date: "2/26/2021"
 output: html_document
